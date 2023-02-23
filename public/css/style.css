@@ -1,0 +1,92 @@
+.sliderimage{
+    height: 600px!important;
+    object-fit: cover;
+    opacity: 40%;
+}
+
+body{
+    background-color: rgb(24, 24, 24);
+}
+.navbtn {
+ color: rgb(175, 175, 185);
+}
+
+.navbar{
+    z-index: 2;
+    display: block;
+    width: 100%;
+    opacity: 99%;
+    position: fixed;
+}
+
+li .navbtn{
+    margin: 0 10px 0 10px;
+    font-weight: 500;
+    font-size: larger;
+}
+
+.carousel-indicators{
+    z-index: 1;
+}
+
+.navbtn:hover{
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 1px rgb(109, 194, 250);
+}
+
+h1{color: rgb(255, 255, 255);
+    font-weight: bold; }
+p{color: rgb(130, 130, 130);
+  font-weight: bold;    
+  font-size: larger;
+}
+
+.card{
+    width: 350px;
+    height: 450px !important;
+    background-color: rgb(25, 25, 25);
+    box-shadow: 0px 0px 50px rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.card h5{
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.card p{
+    color: rgb(101, 101, 101);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: medium;
+}
+
+.card:hover{
+    background-color: rgb(16, 16, 16);
+}
+
+.btn{
+    width: 200px;
+    background-color: rgb(14, 75, 125);
+    border: 0;
+    font-weight:500;
+}
+
+.contactus{
+    margin-top: 100px;
+    background-color: rgb(31, 31, 31);
+    box-shadow: 0px 0px 30px rgb(16, 16, 16);
+    border-radius: 10px;
+    color: aliceblue;
+}
+
+.aboutus{
+    margin-top: 100px;
+    background-color: black;
+    width: 100%;
+    object-fit: cover;
+}
+
+.about_us{
+    padding: 70px 50px 50px 50px;
+}

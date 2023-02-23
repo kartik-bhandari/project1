@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>project1</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div>
+  {{>navbar data = details}}
+	{{>slider slides = slides}}
+</div>
+
+<section id="services-section" class="pt-md-5">
+
+      <div class="container text-center">
+      <h1 class="mb-5">Our services</h1>
+      <div class="row m-5 g-5">
+  {{#each services}}
+        <div class="col-4">
+          <div class="card">
+    <img src="{{this.iconurl}}" style="height: 247px; object-fit: cover; opacity:75%;" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{this.title}}</h5>
+      <p class="card-text">{{this.description}}</p>
+      <a href="{{this.link}}" class="btn btn-primary">{{this.linktitle}}</a>
+    </div>
+  </div>
+        </div>
+  {{/each}} 
+
+</section>
+
+<section id="contact-section" class="md-5">
+  <div class="container contactus col-12 p-5 m-5-5-5-3">
+    <h1 class="text-center mb-5">Contact us</h1>
+  <form action="/process-contact" method="post" class="m-5">
+  <div class="row g-3">
+
+  <div class="mb-3 col-4">
+    <label for="exampleInputPassword1" class="form-label">Name</label>
+    <input name="name" type="text" class="form-control">
+  </div>
+
+  <div class="mb-3 col-8">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text" style="color: rgb(138, 138, 138);">(We'll never share your email with anyone else)</div>
+  </div>
+ 
+  <div class="form-group mb-5 col-12">
+    <label for="exampleFormControlTextarea1" class="mb-2">Your query</label>
+    <textarea name="query" class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+  </div>
+
+  <div class="text-center">
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+   </div>
+  </form>
+  </div>
+</section>
+
+<section id="aboutus-section" class="aboutus text-center">
+
+  <div class="container about_us col-md-12">
+    <h1>About us</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in porta augue. Vestibulum lacinia mi arcu, et convallis dui consectetur eget. Nam non mi nunc. Praesent eu aliquam massa, sit amet venenatis nibh. In hac habitasse platea dictumst. Donec efficitur, odio quis eleifend vulputate, ex nibh commodo erat, non malesuada lorem sem quis ante. Phasellus tempor eleifend commodo. Etiam in est cursus, consectetur risus lacinia, efficitur enim. Curabitur ex velit, faucibus sit amet vulputate ac, faucibus et elit. Nunc at dapibus massa. Phasellus sit amet euismod enim. Sed augue risus, venenatis sed tristique quis, hendrerit a mauris. Integer consectetur risus dui, sit amet pulvinar tellus elementum eget. Ut ac ornare lectus. Cras sodales feugiat elementum.
+
+Suspendisse consequat justo ac nibh tempus porta. Sed eleifend leo ut condimentum porta. Duis gravida lectus metus, at tincidunt diam lacinia in. Nam ac arcu tempus, ullamcorper sem quis, sagittis felis. Integer ornare nibh turpis, at bibendum lectus bibendum tristique. Proin magna dui, auctor vitae ornare eget, dignissim eget purus. Pellentesque purus nisl, consectetur in risus nec, mattis sollicitudin velit. Sed massa elit, suscipit eget placerat in, ultricies non nulla. Ut et dui eu diam lobortis faucibus sed sed metus. Duis a pulvinar massa. Nulla ultricies lorem ut nisl tristique aliquet. Suspendisse potenti. Cras vehicula hendrerit mi eu pharetra.
+
+Integer egestas a nunc vitae consectetur. Praesent pulvinar dui sed dui feugiat, in vestibulum enim tincidunt. Nulla at vulputate enim. Nullam eu ante elementum, venenatis nisl efficitur, pellentesque orci. Ut facilisis tincidunt vulputate. Mauris tempor hendrerit nisi id pellentesque. In accumsan rhoncus nunc, euismod dapibus orci congue eu. Fusce ultricies nisi eget faucibus posuere. Etiam sed nulla vestibulum, pharetra ligula non, congue libero. Cras sapien nibh, accumsan ac tristique nec, dapibus sit amet neque. Sed eget aliquet lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam ac vehicula felis. Sed eget magna feugiat, ultricies libero a, tristique quam. Vestibulum porta augue gravida, tempor augue non, imperdiet lectus.
+
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus nec ex augue. In vel ante nec est pretium scelerisque. Phasellus ac justo ipsum. Nam mollis quam quis ex viverra, ut mattis est laoreet. Etiam rutrum, justo eu molestie ultricies, diam turpis faucibus dolor, eu ullamcorper nisi odio a neque. Etiam cursus auctor tellus non convallis. Cras condimentum porta laoreet. Curabitur quis felis ut dui accumsan vestibulum. Mauris placerat urna in pulvinar pharetra.
+
+Praesent sit amet elit non justo tristique consequat at eu mi. In et blandit arcu. Etiam purus enim, tempus vitae dolor convallis, consequat auctor ipsum. Praesent rutrum euismod urna ac congue. Donec cursus, dui ullamcorper mollis scelerisque, lectus nulla hendrerit sem, id eleifend felis ante porttitor elit. Mauris eu orci massa. Proin efficitur viverra purus, vitae volutpat sapien iaculis nec. Nulla at viverra turpis. Nulla a dictum neque. Maecenas pellentesque ipsum vitae neque lobortis, in porta ligula efficitur. Nam molestie dignissim porta. Aenean id ullamcorper ligula, eu pellentesque libero.</p>
+  
+  <a href="/" class="btn btn-success mt-4" style="background-color: rgb(24, 131, 96);">
+  Go
+  </a>
+
+  </div>
+
+</section>
+
+<footer>
+<div class="container col-md-12 m-3" style="height: 50px; color:aliceblue">
+  @copyright 2023 <span>Kartik Bhandari</span>  
+</div>
+</footer>
+
+  </body>
+</html>
