@@ -14,12 +14,12 @@ mongoose.set('strictQuery', false);
 
 const routes = require("./src/routes/main")
 
-app.use("/static", express.static('public'));
+app.use("/static", express.static('../frontend/public'));
 app.use("",routes)
 
 app.set('view engine', 'hbs')
-app.set("views","views")
-hbs.registerPartials("views/partials")
+app.set("views","../frontend/views")
+hbs.registerPartials("../frontend/views/partials")
 
 mongoose.connect("mongodb+srv://kartikbhandari2003:Xupg6789@project1cluster.8b3lg6n.mongodb.net/project1_men",()=>{
     console.log("db connected")
