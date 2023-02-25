@@ -4,8 +4,14 @@
     opacity: 40%;
 }
 
-body{
+html,body , .col{
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    overflow-x: hidden;
     background-color: rgb(24, 24, 24);
+    justify-content: center;
 }
 .navbtn {
  color: rgb(175, 175, 185);
@@ -89,4 +95,31 @@ p{color: rgb(130, 130, 130);
 
 .about_us{
     padding: 70px 50px 50px 50px;
+}
+
+@media screen and (max-width: 500px) {
+
+    .navbar{
+        display: block;
+        position: sticky;
+    }
+    .services{
+        display: grid;
+        grid-column: span 1;
+        justify-content: center;
+        margin: 0%;
+        padding: 0%;
+    }
+}
+@media screen and (max-width: 1000px) {
+   
+    .navbar{
+        display: block;
+        position: sticky;
+    }
+    .services{
+        display: grid;
+        grid-column: span 1;
+        justify-content: center;
+    }
 }
