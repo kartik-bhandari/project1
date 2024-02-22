@@ -21,7 +21,7 @@ app.set('view engine', 'hbs')
 app.set("views","../frontend/views")
 hbs.registerPartials("../frontend/views/partials")
 
-mongoose.connect("mongodb+srv://kartikbhandari2003:Xupg6789@cluster0.3mqorsq.mongodb.net/project1_men",()=>{
+mongoose.connect("mongodb+srv://kartikbhandari2003:<password>@project1cluster.8b3lg6n.mongodb.net/",()=>{
     console.log("db connected")
     // Detail.create({
     //     brandname: "project1",
